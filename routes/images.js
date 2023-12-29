@@ -15,4 +15,3 @@ router.delete('/name_foto/:name_foto', deleteHistoria);
 
 
 module.exports = router
-
