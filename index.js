@@ -39,7 +39,7 @@ app.use('/administradores', administradores);//la segunda admis es una variable
 
 
 app.listen(port, () => {
-    console.log("Server listening on port " + port);
+    console.log("Server listening on port " + process.env.PORT);
 });
 
 
