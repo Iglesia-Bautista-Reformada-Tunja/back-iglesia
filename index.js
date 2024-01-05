@@ -12,6 +12,7 @@ const {administradores} = require("./routes/administradores");//desestructurar
 
 const pdfsRoutes = require("./routes/pdfs");
 const cors = require("cors");
+const { config } = require("dotenv");
 
 
 app.use(express.json());
@@ -41,9 +42,15 @@ app.get('/', (req, res) => {
     res.send('¡Hola, esta es la página de inicio de mi aplicación!');
   });
 
+app.listen(config.port, () => {
+    console.log("Server listening on port ", config.port);
+});
+
+/*  con este lo tenia funcionando
 app.listen(port, () => {
     console.log("Server listening on port " + process.env.PORT);
 });
+*/
 
 
 /* 
