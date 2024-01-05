@@ -36,7 +36,10 @@ app.use('/api/pdfs', pdfsRoutes);
 
 app.use('/administradores', administradores);//la segunda admis es una variable
 
-
+// Ruta raíz
+app.get('/', (req, res) => {
+    res.send('¡Hola, esta es la página de inicio de mi aplicación!');
+  });
 
 app.listen(port, () => {
     console.log("Server listening on port " + process.env.PORT);
