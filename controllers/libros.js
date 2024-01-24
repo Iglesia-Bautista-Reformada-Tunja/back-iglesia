@@ -45,7 +45,7 @@ postLibro = async (req, res)=>{
         console.log(element.filename)
         bookRutas.push(`${process.env.APP_URL}/libros/${element.filename}`); //npmbre de la carpeta donde guardamos las imagenes (libros)
     });
-    console.log(bookRutas)
+    console.log("desde postLibro", bookRutas)
     const libro = new libros({
         nameBook,
         article,
@@ -69,11 +69,6 @@ const deleteArticulo = (req, res) => {
         }
     });
 }
-
-
-
-
-
 
 
 module.exports = {

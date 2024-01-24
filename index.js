@@ -1,7 +1,7 @@
 const dotenv = require("dotenv").config();
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 const db = require("./database/db");
 const imagesRoutes = require("./routes/images");
 const librosRoutes = require("./routes/libros");
@@ -37,15 +37,17 @@ app.use('/api/pdfs', pdfsRoutes);
 
 app.use('/administradores', administradores);//la segunda admis es una variable
 
+
+app.listen(PORT,()=>{
+    console.log("funciono como servidor http en http://localhost:"+process.env.PORT)
+})
+
 // Ruta raíz
 //app.get('/', (req, res) => {
   //  res.send('¡Hola, esta es la página de inicio de mi aplicación!');
 //});
 
 
-app.listen(process.env.PORT || 3000,()=>{
-    console.log("funciono como servidor http en http://localhost:"+process.env.PORT)
-})
 /*
 app.listen(port, () => {
     console.log("Server listening on port " + process.env.PORT);
