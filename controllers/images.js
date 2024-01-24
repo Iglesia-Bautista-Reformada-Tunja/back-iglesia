@@ -15,6 +15,7 @@ postMultipleImage = async (req, res)=>{
         console.log(element.filename)
         //imageRutas.push(`http://localhost:${process.env.PORT}/images/${element.filename}`); //npmbre varable coincide con el del modelo
         imageRutas.push(`${process.env.APP_URL}/images/${element.filename}`);
+        console.log(`URL: ${process.env.APP_URL}`);
     });
     console.log(imageRutas)
     const image = new imageMultiples({
