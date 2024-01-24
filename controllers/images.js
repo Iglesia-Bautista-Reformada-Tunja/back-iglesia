@@ -1,6 +1,7 @@
 //const image = require("../models/image");
 const imageMultiples = require("../models/imageMultiple");
 
+
 getImages = async (req, res)=>{
     const images = await imageMultiples.find();
     res.status(200).json(images);
