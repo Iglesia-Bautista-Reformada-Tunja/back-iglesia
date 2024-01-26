@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended:false}));
 //app.use('/libros', libros)
 
 app.use('/images', express.static('./images'));  //muestra file planos
-app.use('/api/images', imagesRoutes);   // app imagemultiples
+app.use('/api/images', imagesRoutes);   // app imageMultiples
 
 app.use('/api/pagination', librosRoutes)
 
